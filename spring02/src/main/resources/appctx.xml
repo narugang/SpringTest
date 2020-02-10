@@ -5,6 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
+	<!-- 객체 생성 = new와 같다. -->
 	<bean id="memberDao" class="spring.MemberDao">
 	</bean>		
 	
