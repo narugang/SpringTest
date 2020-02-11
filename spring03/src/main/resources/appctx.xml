@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+		
+	<!-- 객체 생성 = new와 같다. -->
+	<context:annotation-config/>
+	<!-- annotation설정에 의해 그제서야 집어넣게 된다. -->
+	<!-- spring은 그냥 생성하고 -->
+	<bean id="memberDao" class="spring.MemberDao"></bean>		
+	
+	<bean id="memberRegSvc" class="spring.MemberRegisterService"></bean>
+	
+	<!-- <bean id="memberPrinter" class="spring.MemberPrinter"></bean> -->
+	
+	
+	<bean id="infoPrinter" class="spring.MemberInfoPrinter"></bean>
+	
+	<bean id="memberPrinter1" class="spring.MemberPrinter">
+		<qualifier value="sysout"/>
+	</bean>
+	<bean id="memberPrinter2" class="spring.MemberPrinter"></bean>
+	
+	
+	<!-- 
+	<bean id="changePwdSvc" class="spring.ChangePasswordService"></bean>
+	<bean id="listPrinter" class="spring.MemberListPrinter"></bean>
+		
+	
+	<bean id="versionPrinter" class="spring.VersionPrinter"></bean> -->
+	
+</beans>
