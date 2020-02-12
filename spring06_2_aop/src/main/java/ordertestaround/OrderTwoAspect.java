@@ -9,6 +9,7 @@ import org.springframework.core.Ordered;
 public class OrderTwoAspect implements Ordered {
 	@Around("execution(void *.run())")
 	public void printOrder(ProceedingJoinPoint jp) {
+		
 		try {
 			System.out.println("before:order 2");
 			jp.proceed();

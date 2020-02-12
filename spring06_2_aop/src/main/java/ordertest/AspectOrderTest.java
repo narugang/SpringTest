@@ -12,9 +12,18 @@ public class AspectOrderTest {
 						OrderTwoAspect.class, 
 						OrderOneAspect.class, 
 						MainBeans.class);
+		
+		
+		
+		
+		
+		
+		
 		Runnable printer = context.getBean(Runnable.class);
 		printer.run();
+		
 		System.out.println("=============================");
+		
 		Runnable printer2 = context.getBean(Runnable.class);
 		printer2.run();
 	}

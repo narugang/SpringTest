@@ -10,8 +10,9 @@ import org.springframework.core.annotation.Order;
 public class OrderOneAspect {
 	@Around("execution(void *.run())")
 	public void printOrder(ProceedingJoinPoint jp) {
+		
 		try {
-			System.out.println("order 1");
+			System.out.println("order 1");//before
 			jp.proceed();
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block

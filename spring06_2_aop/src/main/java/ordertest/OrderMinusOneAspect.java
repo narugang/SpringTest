@@ -6,14 +6,15 @@ import org.aspectj.lang.annotation.Aspect;
 import org.springframework.core.annotation.Order;
 
 @Aspect
-@Order(4)
+@Order(-1)
 public class OrderMinusOneAspect {
 	@Around("execution(void *.run())")
 	public void printOrder(ProceedingJoinPoint jp) {
-		System.out.println("order -1");
+		
+		System.out.println("order -1"); //before
 		long val = System.nanoTime();
+		
 		try {
-			
 			jp.proceed();
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block

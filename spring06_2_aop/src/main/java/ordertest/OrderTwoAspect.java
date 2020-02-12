@@ -12,12 +12,12 @@ public class OrderTwoAspect implements Ordered {
 	@Around("execution(void *.run())")
 	public void printOrder(ProceedingJoinPoint jp) {
 		try {
-			jp.proceed();
+			jp.proceed(); // target
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("order 2");
+		System.out.println("order 2");// after
 	}
 
 	public int getOrder() {

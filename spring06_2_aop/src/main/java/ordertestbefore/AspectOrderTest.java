@@ -12,6 +12,8 @@ public class AspectOrderTest {
 						OrderTwoAspect.class, 
 						OrderOneAspect.class, 
 						MainBeans.class);
+		
+		
 		Runnable printer = context.getBean(Runnable.class);
 		printer.run();
 		System.out.println("=============================");
