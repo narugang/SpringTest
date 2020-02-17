@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<mvc:annotation-driven />
+
+	<mvc:default-servlet-handler />
+
+	<!-- view를 해석해주는 애 -->
+	<mvc:view-resolvers>
+		<mvc:jsp prefix="/WEB-INF/view/" /> <!-- [prefix : 접두사] 기본 경로를 얘로 설정해 놓는 것 / 차후 바뀔 수 있다. -->
+		<!-- suffix 라는 것을 지정할 수도 있다. (뒤에 뭐 붙여라) ex.jsp 안붙이는 이유 = 기본 디폴트 값이 .jsp이다.-->
+	</mvc:view-resolvers>
+
+</beans>
